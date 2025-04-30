@@ -266,7 +266,7 @@ type ChatCompletionRequest struct {
 	EnableSearch   bool              `json:"enable_search,omitempty"`
 	SearchOptions  map[string]any    `json:"search_options,omitempty"`
 	EnableThinking bool              `json:"enable_thinking,omitempty"`
-	Vendor         string            `json:"vendor,omitempty"`
+	Vendor         string            `json:"-"`
 }
 
 type StreamOptions struct {
