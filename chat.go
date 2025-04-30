@@ -265,7 +265,7 @@ type ChatCompletionRequest struct {
 	Metadata       map[string]string `json:"metadata,omitempty"`
 	EnableSearch   bool              `json:"enable_search,omitempty"`
 	SearchOptions  map[string]any    `json:"search_options,omitempty"`
-	EnableThinking bool              `json:"enable_thinking"`
+	EnableThinking bool              `json:"enable_thinking,omitempty"`
 }
 
 type StreamOptions struct {
