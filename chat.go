@@ -248,8 +248,8 @@ type ChatCompletionRequest struct {
 	// Deprecated: use Tools instead.
 	Functions []FunctionDefinition `json:"functions,omitempty"`
 	// Deprecated: use ToolChoice instead.
-	FunctionCall any    `json:"function_call,omitempty"`
-	Tools        []Tool `json:"tools,omitempty"`
+	FunctionCall any     `json:"function_call,omitempty"`
+	Tools        []Tool1 `json:"tools,omitempty"`
 	// This can be either a string or an ToolChoice object.
 	ToolChoice any `json:"tool_choice,omitempty"`
 	// Options for streaming response. Only set this when you set stream: true.
@@ -287,6 +287,8 @@ type Tool struct {
 	Type     ToolType            `json:"type"`
 	Function *FunctionDefinition `json:"function,omitempty"`
 }
+
+type Tool1 map[string]struct{}
 
 type ToolChoice struct {
 	Type     ToolType     `json:"type"`
